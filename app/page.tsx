@@ -128,14 +128,14 @@ export default function Home() {
             </div>
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
-                <div className="w-80 h-80 bg-gradient rounded-full opacity-20 blur-3xl"></div>
+                <div className="w-80 h-80 bg-gradient rounded-full opacity-25 blur-3xl"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <Image
                     src="/logo.png"
                     alt="Codecrafters Solutions"
-                    width={200}
-                    height={200}
-                    className="w-48 h-48 object-contain"
+                    width={600}
+                    height={600}
+                    className="w-60 h-60 object-contain invert-[65%]"
                   />
                 </div>
               </div>

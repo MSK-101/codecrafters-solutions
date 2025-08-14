@@ -299,7 +299,8 @@ export default function CookiePolicy() {
                   </a>
                 </p>
                 <p className="text-gray-700">
-                  <strong>Address:</strong> Codecrafters Solutions
+                  <strong>Address:</strong> House No 961, Block R1, Johar Town,
+                  Lahore, Pakistan
                 </p>
               </div>
             </div>
