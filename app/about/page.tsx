@@ -99,77 +99,155 @@ export default function About() {
         "Visionary leader with 10+ years in software development and business strategy.",
     },
     {
-      name: "Muhammad Hammad",
+      name: "Sarah Johnson",
       role: "CTO",
       description:
-        "Technology expert specializing in AI, cloud architecture, and scalable solutions.",
+        "Technical expert specializing in cloud architecture and scalable solutions.",
     },
     {
-      name: "Muhammad Hashim",
-      role: "Admin",
+      name: "David Chen",
+      role: "Lead Developer",
       description:
-        "Admin focused on managing the company's operations and ensuring smooth workflow.",
+        "Full-stack developer with expertise in modern web technologies and frameworks.",
     },
     {
-      name: "Minahil Javed",
-      role: "Quality Assurance Tester",
+      name: "Emily Rodriguez",
+      role: "UI/UX Designer",
       description:
-        "Quality Assurance Tester focused on user experience and modern UX principles.",
+        "Creative designer focused on creating intuitive and beautiful user experiences.",
     },
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-black via-gray-900 to-black text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl lg:text-6xl font-bold mb-6">
-            About <span className="text-gradient">Codecrafters</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            We are a passionate team of innovators, developers, and designers
-            dedicated to transforming businesses through cutting-edge technology
-            solutions.
-          </p>
+      <section className="relative py-20 bg-gradient-to-br from-black via-gray-900 to-black">
+        <div className="absolute inset-0 grid-pattern opacity-10"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center animate-fade-in-up">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              About{" "}
+              <span className="text-gradient neon-text">CodeCrafters</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              We are a passionate team of innovators, creators, and
+              problem-solvers dedicated to transforming ideas into powerful
+              digital solutions that drive business growth and success.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Story Section */}
-      <section className="py-20 bg-white">
+      {/* Mission Section */}
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-black mb-6">
-                Our <span className="text-gradient">Story</span>
+            <div className="animate-slide-in-left">
+              <h2 className="text-4xl font-bold mb-6">
+                Our <span className="text-gradient neon-text">Mission</span>
               </h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Founded in 2019, Codecrafters Solutions began with a simple
-                mission: to help businesses navigate the digital landscape with
-                innovative, reliable, and scalable technology solutions.
+              <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+                To empower businesses with innovative technology solutions that
+                drive growth, efficiency, and competitive advantage. We believe
+                that every great idea deserves to be brought to life with
+                excellence and precision.
               </p>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                What started as a small team of passionate developers has grown
-                into a global company serving clients across multiple
-                industries. Our journey has been marked by continuous learning,
-                adaptation to emerging technologies, and an unwavering
-                commitment to client success.
-              </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                Today, we stand as a trusted partner for businesses looking to
-                leverage technology to drive growth, improve efficiency, and
-                create meaningful digital experiences for their customers.
+              <p className="text-lg text-gray-300 leading-relaxed">
+                Our commitment to quality, innovation, and client success has
+                made us a trusted partner for businesses worldwide, helping them
+                navigate the digital landscape with confidence and achieve their
+                goals.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-orange-500 to-orange-600 p-8 rounded-2xl">
-              <div className="bg-white p-6 rounded-xl">
-                <h3 className="text-2xl font-bold text-black mb-4">
-                  Our Mission
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  To empower businesses with innovative digital solutions that
-                  drive growth, enhance efficiency, and create lasting value in
-                  an ever-evolving technological landscape.
-                </p>
+            <div className="relative animate-slide-in-right">
+              <div className="bg-gradient-to-br from-orange-500 to-orange-600 p-8 rounded-2xl animate-pulse-glow">
+                <div className="bg-black p-6 rounded-xl">
+                  <h3 className="text-2xl font-bold text-white mb-4">
+                    Why Choose Us?
+                  </h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-center space-x-3">
+                      <div className="w-6 h-6 bg-gradient rounded-full flex items-center justify-center">
+                        <svg
+                          className="w-4 h-4 text-white"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                      </div>
+                      <span className="text-white">
+                        Expert team with proven track record
+                      </span>
+                    </li>
+                    <li className="flex items-center space-x-3">
+                      <div className="w-6 h-6 bg-gradient rounded-full flex items-center justify-center">
+                        <svg
+                          className="w-4 h-4 text-white"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                      </div>
+                      <span className="text-white">
+                        Cutting-edge technology stack
+                      </span>
+                    </li>
+                    <li className="flex items-center space-x-3">
+                      <div className="w-6 h-6 bg-gradient rounded-full flex items-center justify-center">
+                        <svg
+                          className="w-4 h-4 text-white"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                      </div>
+                      <span className="text-white">
+                        24/7 support and maintenance
+                      </span>
+                    </li>
+                    <li className="flex items-center space-x-3">
+                      <div className="w-6 h-6 bg-gradient rounded-full flex items-center justify-center">
+                        <svg
+                          className="w-4 h-4 text-white"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                      </div>
+                      <span className="text-white">
+                        Agile development methodology
+                      </span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -177,28 +255,30 @@ export default function About() {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-black mb-4">
-              Our <span className="text-gradient">Values</span>
+          <div className="text-center mb-16 animate-fade-in-up">
+            <h2 className="text-4xl font-bold mb-4">
+              Our <span className="text-gradient neon-text">Values</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              These core values guide everything we do and shape the way we work
-              with our clients and partners.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              The principles that guide our work and relationships with clients.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <div
                 key={index}
-                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300"
+                className="bg-gray-900 p-8 rounded-2xl hover-lift group"
+                style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <div className="text-orange-500 mb-4">{value.icon}</div>
-                <h3 className="text-xl font-semibold text-black mb-3">
+                <div className="text-orange-500 mb-6 group-hover:scale-110 transition-transform duration-300">
+                  {value.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-orange-500 transition-colors">
                   {value.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-400 leading-relaxed">
                   {value.description}
                 </p>
               </div>
@@ -208,24 +288,28 @@ export default function About() {
       </section>
 
       {/* Achievements Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-black mb-4">
-              Our <span className="text-gradient">Achievements</span>
+          <div className="text-center mb-16 animate-fade-in-up">
+            <h2 className="text-4xl font-bold mb-4">
+              Our <span className="text-gradient neon-text">Achievements</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Numbers that reflect our commitment to excellence and client
               satisfaction.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {achievements.map((achievement, index) => (
-              <div key={index} className="text-center">
+              <div
+                key={index}
+                className="text-center animate-fade-in-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
                 <div className="text-5xl font-bold text-gradient mb-2">
                   {achievement.number}
                 </div>
-                <div className="text-gray-600 font-medium">
+                <div className="text-gray-400 font-medium">
                   {achievement.label}
                 </div>
               </div>
@@ -235,13 +319,13 @@ export default function About() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-black mb-4">
-              Meet Our <span className="text-gradient">Team</span>
+          <div className="text-center mb-16 animate-fade-in-up">
+            <h2 className="text-4xl font-bold mb-4">
+              Meet Our <span className="text-gradient neon-text">Team</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our talented team of professionals brings together diverse
               expertise to deliver exceptional results.
             </p>
@@ -250,7 +334,8 @@ export default function About() {
             {team.map((member, index) => (
               <div
                 key={index}
-                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300"
+                className="bg-gray-900 p-8 rounded-2xl hover-lift group"
+                style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div className="w-20 h-20 bg-gradient rounded-full mx-auto mb-4 flex items-center justify-center">
                   <span className="text-white text-2xl font-bold">
@@ -260,13 +345,13 @@ export default function About() {
                       .join("")}
                   </span>
                 </div>
-                <h3 className="text-xl font-semibold text-black text-center mb-2">
+                <h3 className="text-xl font-semibold text-white text-center mb-2 group-hover:text-orange-500 transition-colors">
                   {member.name}
                 </h3>
                 <p className="text-orange-500 text-center font-medium mb-3">
                   {member.role}
                 </p>
-                <p className="text-gray-600 text-center leading-relaxed">
+                <p className="text-gray-400 text-center leading-relaxed">
                   {member.description}
                 </p>
               </div>
@@ -276,20 +361,21 @@ export default function About() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
+      <section className="py-20 bg-gradient-to-r from-orange-600 to-orange-500 relative overflow-hidden">
+        <div className="absolute inset-0 bg-black opacity-20"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6 animate-fade-in-up">
             Ready to Work With Us?
           </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-            Let's discuss your project and see how our team can help bring your
-            vision to life. We're here to turn your ideas into powerful digital
-            solutions.
+          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto animate-fade-in-up">
+            Let&apos;s discuss your project and see how our team can help bring
+            your vision to life. We&apos;re here to turn your ideas into
+            powerful digital solutions.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up">
             <Link
               href="/contact"
-              className="bg-white text-orange-500 px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 inline-block"
+              className="bg-white text-orange-500 px-8 py-4 rounded-lg font-semibold text-lg hover-lift hover-glow transform transition-all duration-300 inline-block"
             >
               Get In Touch
             </Link>
