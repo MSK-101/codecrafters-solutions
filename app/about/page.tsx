@@ -99,22 +99,22 @@ export default function About() {
         "Visionary leader with 10+ years in software development and business strategy.",
     },
     {
-      name: "Sarah Johnson",
+      name: "Muhammad Hammad",
       role: "CTO",
       description:
-        "Technical expert specializing in cloud architecture and scalable solutions.",
+        "Technology expert specializing in AI, cloud architecture, and scalable solutions.",
     },
     {
-      name: "David Chen",
-      role: "Lead Developer",
+      name: "Muhammad Hashim",
+      role: "Admin",
       description:
-        "Full-stack developer with expertise in modern web technologies and frameworks.",
+        "Admin focused on managing the company's operations and ensuring smooth workflow.",
     },
     {
-      name: "Emily Rodriguez",
-      role: "UI/UX Designer",
+      name: "Minahil Javed",
+      role: "Lead QA",
       description:
-        "Creative designer focused on creating intuitive and beautiful user experiences.",
+        "Quality Assurance Tester focused on user experience and modern UX principles.",
     },
   ];
 
