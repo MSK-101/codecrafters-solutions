@@ -180,16 +180,16 @@ export default function Services() {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-black via-gray-900 to-black">
-        <div className="absolute inset-0 grid-pattern opacity-10"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 lg:pb-48 lg:pt-96 pt-54">
+        <div className="absolute inset-0 grid-pattern opacity-20"></div>
+        <div className="relative z-10 container-modern">
           <div className="text-center animate-fade-in-up">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Our <span className="text-gradient neon-text">Services</span>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8">
+              Our <span className="text-gradient">Services</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-text-secondary max-w-4xl mx-auto leading-relaxed mb-12">
               We offer comprehensive digital solutions to help your business
               thrive in the modern digital landscape. From web development to
               cloud solutions, we&apos;ve got you covered.
@@ -199,26 +199,26 @@ export default function Services() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-black">
+      <section className="py-20 md:py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {services.map((service, index) => (
               <div
                 key={service.id}
                 id={service.id}
-                className="bg-gray-900 p-8 rounded-2xl hover-lift group"
+                className="card-modern p-8 hover-tilt group animate-slide-up"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <div className="text-orange-500 mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="text-primary mb-6 group-hover:scale-105 transition-transform duration-300">
                   {service.icon}
                 </div>
-                <h2 className="text-3xl font-bold text-white mb-2 group-hover:text-orange-500 transition-colors">
+                <h2 className="text-3xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
                   {service.title}
                 </h2>
-                <p className="text-orange-500 font-semibold mb-4">
+                <p className="text-primary font-semibold mb-4">
                   {service.subtitle}
                 </p>
-                <p className="text-gray-400 mb-6 leading-relaxed">
+                <p className="text-text-secondary mb-6 leading-relaxed">
                   {service.description}
                 </p>
 
@@ -232,8 +232,8 @@ export default function Services() {
                         key={featureIndex}
                         className="flex items-center space-x-3"
                       >
-                        <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                        <span className="text-gray-300">{feature}</span>
+                        <div className="w-2 h-2 bg-primary rounded-full"></div>
+                        <span className="text-text-secondary">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -247,7 +247,7 @@ export default function Services() {
                     {service.technologies.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-3 py-1 bg-orange-500/20 text-orange-500 rounded-full text-sm border border-orange-500/30"
+                        className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm border border-primary/30"
                       >
                         {tech}
                       </span>
@@ -280,7 +280,7 @@ export default function Services() {
                             />
                           </svg>
                         </div>
-                        <span className="text-gray-300">{benefit}</span>
+                        <span className="text-text-secondary">{benefit}</span>
                       </li>
                     ))}
                   </ul>
@@ -292,13 +292,13 @@ export default function Services() {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
+      <section className="py-20 md:py-24 lg:py-32 bg-background-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="text-4xl font-bold mb-4">
               Our <span className="text-gradient neon-text">Process</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-text-secondary max-w-3xl mx-auto">
               We follow a proven methodology to ensure successful project
               delivery and client satisfaction.
             </p>
@@ -316,7 +316,7 @@ export default function Services() {
                 <h3 className="text-xl font-semibold text-white mb-4">
                   {step.title}
                 </h3>
-                <p className="text-gray-400 leading-relaxed">
+                <p className="text-text-secondary leading-relaxed">
                   {step.description}
                 </p>
               </div>
@@ -326,8 +326,8 @@ export default function Services() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-orange-600 to-orange-500 relative overflow-hidden">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
+      <section className="section-padding gradient-cta relative overflow-hidden">
+        <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6 animate-fade-in-up">
             Ready to Get Started?
@@ -338,7 +338,7 @@ export default function Services() {
           </p>
           <Link
             href="/contact"
-            className="bg-white text-orange-500 px-8 py-4 rounded-lg font-semibold text-lg hover-lift hover-glow transform transition-all duration-300 inline-block animate-fade-in-up"
+            className="bg-white text-primary px-8 py-4 rounded-xl font-semibold text-lg hover-lift transition-all duration-300 inline-block animate-fade-in-up"
           >
             Get Free Consultation
           </Link>
