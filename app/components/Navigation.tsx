@@ -1,10 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
 
   const navItems = [
     { name: "Home", href: "/" },
@@ -13,34 +16,71 @@ export default function Navigation() {
     { name: "Contact", href: "/contact" },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="glass-effect sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        isScrolled ? "nav-modern shadow-lg" : "bg-transparent"
+      }`}
+    >
+      <div className="container-modern">
         <div className="flex justify-between items-center h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 group">
-            <div className="text-2xl font-bold">
-              <span className="text-white">Code</span>
-              <span className="text-gradient neon-text">Crafters</span>
+          {/* New Modern Logo */}
+          <Link href="/" className="flex items-center space-x-3 group">
+            <div className="relative">
+              {/* Logo Icon */}
+              <div className="w-10 h-10 gradient-primary rounded-xl flex items-center justify-center logo-glow">
+                <svg
+                  className="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2.5}
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  />
+                </svg>
+              </div>
+              {/* Logo Glow Effect */}
+              <div className="absolute inset-0 w-10 h-10 gradient-primary rounded-xl opacity-20 blur-sm group-hover:opacity-40 transition-opacity"></div>
+            </div>
+
+            {/* Brand Text */}
+            <div className="flex flex-col">
+              <span className="text-xl font-bold text-white group-hover:text-gradient transition-all duration-300">
+                CodeCrafters
+              </span>
+              <span className="text-xs text-secondary font-medium -mt-1">
+                SOLUTIONS
+              </span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-2">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-300 hover:text-orange-500 font-medium transition-all duration-300 relative group"
+                className={`nav-link ${pathname === item.href ? "active" : ""}`}
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
-            <Link
-              href="/contact"
-              className="bg-gradient text-white px-6 py-2 rounded-lg font-medium hover-lift hover-glow transform transition-all duration-300"
-            >
+
+            {/* CTA Button */}
+            <Link href="/contact" className="btn-primary ml-4">
               Get Started
             </Link>
           </div>
@@ -49,7 +89,8 @@ export default function Navigation() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-300 hover:text-orange-500 focus:outline-none focus:text-orange-500 transition-colors duration-300"
+              className="text-white hover:text-primary focus:outline-none transition-colors duration-200"
+              aria-label="Toggle menu"
             >
               <svg
                 className="h-6 w-6"
@@ -80,24 +121,30 @@ export default function Navigation() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden animate-fade-in-up">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 glass-effect border-t border-gray-700">
-              {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="text-gray-300 hover:text-orange-500 block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 hover:bg-gray-800"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
-              <Link
-                href="/contact"
-                className="bg-gradient text-white block px-3 py-2 rounded-md text-base font-medium hover-lift transition-all duration-300"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Get Started
-              </Link>
+            <div className="card-modern mt-4 p-4 border-t border-border">
+              <div className="space-y-2">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className={`nav-link block w-full text-left ${
+                      pathname === item.href ? "active" : ""
+                    }`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+                <div className="pt-4 border-t border-border mt-4">
+                  <Link
+                    href="/contact"
+                    className="btn-primary w-full text-center block"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Get Started
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         )}
