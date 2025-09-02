@@ -119,17 +119,16 @@ export default function About() {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-black via-gray-900 to-black">
-        <div className="absolute inset-0 grid-pattern opacity-10"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 lg:pb-72 lg:pt-96 pt-54">
+        <div className="absolute inset-0 grid-pattern opacity-20"></div>
+        <div className="relative z-10 container-modern">
           <div className="text-center animate-fade-in-up">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              About{" "}
-              <span className="text-gradient neon-text">CodeCrafters</span>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8">
+              About <span className="text-gradient">CodeCrafters</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-text-secondary max-w-4xl mx-auto leading-relaxed mb-12">
               We are a passionate team of innovators, creators, and
               problem-solvers dedicated to transforming ideas into powerful
               digital solutions that drive business growth and success.
@@ -139,20 +138,20 @@ export default function About() {
       </section>
 
       {/* Mission Section */}
-      <section className="py-20 bg-black">
+      <section className="section-padding bg-background-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-slide-in-left">
               <h2 className="text-4xl font-bold mb-6">
                 Our <span className="text-gradient neon-text">Mission</span>
               </h2>
-              <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+              <p className="text-lg text-text-secondary mb-6 leading-relaxed">
                 To empower businesses with innovative technology solutions that
                 drive growth, efficiency, and competitive advantage. We believe
                 that every great idea deserves to be brought to life with
                 excellence and precision.
               </p>
-              <p className="text-lg text-gray-300 leading-relaxed">
+              <p className="text-lg text-text-secondary leading-relaxed">
                 Our commitment to quality, innovation, and client success has
                 made us a trusted partner for businesses worldwide, helping them
                 navigate the digital landscape with confidence and achieve their
@@ -160,93 +159,96 @@ export default function About() {
               </p>
             </div>
             <div className="relative animate-slide-in-right">
-              <div className="bg-gradient-to-br from-orange-500 to-orange-600 p-8 rounded-2xl animate-pulse-glow">
-                <div className="bg-black p-6 rounded-xl">
-                  <h3 className="text-2xl font-bold text-white mb-4">
-                    Why Choose Us?
-                  </h3>
-                  <ul className="space-y-3">
-                    <li className="flex items-center space-x-3">
-                      <div className="w-6 h-6 bg-gradient rounded-full flex items-center justify-center">
-                        <svg
-                          className="w-4 h-4 text-white"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                      </div>
-                      <span className="text-white">
-                        Expert team with proven track record
-                      </span>
-                    </li>
-                    <li className="flex items-center space-x-3">
-                      <div className="w-6 h-6 bg-gradient rounded-full flex items-center justify-center">
-                        <svg
-                          className="w-4 h-4 text-white"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                      </div>
-                      <span className="text-white">
-                        Cutting-edge technology stack
-                      </span>
-                    </li>
-                    <li className="flex items-center space-x-3">
-                      <div className="w-6 h-6 bg-gradient rounded-full flex items-center justify-center">
-                        <svg
-                          className="w-4 h-4 text-white"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                      </div>
-                      <span className="text-white">
-                        24/7 support and maintenance
-                      </span>
-                    </li>
-                    <li className="flex items-center space-x-3">
-                      <div className="w-6 h-6 bg-gradient rounded-full flex items-center justify-center">
-                        <svg
-                          className="w-4 h-4 text-white"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                      </div>
-                      <span className="text-white">
-                        Agile development methodology
-                      </span>
-                    </li>
-                  </ul>
+              <div className="border-gradient-modern animate-pulse-glow">
+                <div className="gradient-cta p-8 rounded-xl relative overflow-hidden">
+                  <div className="absolute inset-0 gradient-primary-to-r from-transparent via-white/10 to-transparent animate-shimmer"></div>
+                  <div className="relative z-10">
+                    <h3 className="text-2xl font-bold text-white mb-4">
+                      Why Choose Us?
+                    </h3>
+                    <ul className="space-y-3">
+                      <li className="flex items-center space-x-3">
+                        <div className="w-6 h-6 gradient-primary rounded-full flex items-center justify-center">
+                          <svg
+                            className="w-4 h-4 text-white"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M5 13l4 4L19 7"
+                            />
+                          </svg>
+                        </div>
+                        <span className="text-white">
+                          Expert team with proven track record
+                        </span>
+                      </li>
+                      <li className="flex items-center space-x-3">
+                        <div className="w-6 h-6 gradient-primary rounded-full flex items-center justify-center">
+                          <svg
+                            className="w-4 h-4 text-white"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M5 13l4 4L19 7"
+                            />
+                          </svg>
+                        </div>
+                        <span className="text-white">
+                          Cutting-edge technology stack
+                        </span>
+                      </li>
+                      <li className="flex items-center space-x-3">
+                        <div className="w-6 h-6 gradient-primary rounded-full flex items-center justify-center">
+                          <svg
+                            className="w-4 h-4 text-white"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M5 13l4 4L19 7"
+                            />
+                          </svg>
+                        </div>
+                        <span className="text-white">
+                          24/7 support and maintenance
+                        </span>
+                      </li>
+                      <li className="flex items-center space-x-3">
+                        <div className="w-6 h-6 gradient-primary rounded-full flex items-center justify-center">
+                          <svg
+                            className="w-4 h-4 text-white"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M5 13l4 4L19 7"
+                            />
+                          </svg>
+                        </div>
+                        <span className="text-white">
+                          Agile development methodology
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -255,13 +257,13 @@ export default function About() {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 bg-gradient-to-b from-black to-gray-900">
+      <section className="py-20 md:py-24 lg:py-32 gradient-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="text-4xl font-bold mb-4">
               Our <span className="text-gradient neon-text">Values</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-text-secondary max-w-3xl mx-auto">
               The principles that guide our work and relationships with clients.
             </p>
           </div>
@@ -269,16 +271,16 @@ export default function About() {
             {values.map((value, index) => (
               <div
                 key={index}
-                className="bg-gray-900 p-8 rounded-2xl hover-lift group"
+                className="card-modern p-8 hover-tilt group animate-slide-up"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <div className="text-orange-500 mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="text-primary mb-6 group-hover:scale-105 transition-transform duration-300">
                   {value.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-orange-500 transition-colors">
+                <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-primary transition-colors">
                   {value.title}
                 </h3>
-                <p className="text-gray-400 leading-relaxed">
+                <p className="text-text-secondary leading-relaxed">
                   {value.description}
                 </p>
               </div>
@@ -288,13 +290,13 @@ export default function About() {
       </section>
 
       {/* Achievements Section */}
-      <section className="py-20 bg-black">
+      <section className="py-20 md:py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="text-4xl font-bold mb-4">
               Our <span className="text-gradient neon-text">Achievements</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-text-secondary max-w-3xl mx-auto">
               Numbers that reflect our commitment to excellence and client
               satisfaction.
             </p>
@@ -309,7 +311,7 @@ export default function About() {
                 <div className="text-5xl font-bold text-gradient mb-2">
                   {achievement.number}
                 </div>
-                <div className="text-gray-400 font-medium">
+                <div className="text-text-secondary font-medium">
                   {achievement.label}
                 </div>
               </div>
@@ -319,13 +321,13 @@ export default function About() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
+      <section className="py-20 md:py-24 lg:py-32 bg-background-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="text-4xl font-bold mb-4">
               Meet Our <span className="text-gradient neon-text">Team</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-text-secondary max-w-3xl mx-auto">
               Our talented team of professionals brings together diverse
               expertise to deliver exceptional results.
             </p>
@@ -334,10 +336,10 @@ export default function About() {
             {team.map((member, index) => (
               <div
                 key={index}
-                className="bg-gray-900 p-8 rounded-2xl hover-lift group"
+                className="card-modern p-8 hover-scale group animate-slide-up"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <div className="w-20 h-20 bg-gradient rounded-full mx-auto mb-4 flex items-center justify-center">
+                <div className="w-20 h-20 gradient-primary rounded-full mx-auto mb-4 flex items-center justify-center">
                   <span className="text-white text-2xl font-bold">
                     {member.name
                       .split(" ")
@@ -345,13 +347,13 @@ export default function About() {
                       .join("")}
                   </span>
                 </div>
-                <h3 className="text-xl font-semibold text-white text-center mb-2 group-hover:text-orange-500 transition-colors">
+                <h3 className="text-xl font-semibold text-white text-center mb-2 group-hover:text-primary transition-colors">
                   {member.name}
                 </h3>
-                <p className="text-orange-500 text-center font-medium mb-3">
+                <p className="text-primary text-center font-medium mb-3">
                   {member.role}
                 </p>
-                <p className="text-gray-400 text-center leading-relaxed">
+                <p className="text-text-secondary text-center leading-relaxed">
                   {member.description}
                 </p>
               </div>
@@ -361,7 +363,7 @@ export default function About() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-orange-600 to-orange-500 relative overflow-hidden">
+      <section className="section-padding gradient-cta relative overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-20"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6 animate-fade-in-up">
@@ -375,13 +377,13 @@ export default function About() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up">
             <Link
               href="/contact"
-              className="bg-white text-orange-500 px-8 py-4 rounded-lg font-semibold text-lg hover-lift hover-glow transform transition-all duration-300 inline-block"
+              className="bg-white text-primary px-8 py-4 rounded-xl font-semibold text-lg hover-lift transition-all duration-300"
             >
               Get In Touch
             </Link>
             <Link
               href="/services"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-orange-500 transition-all duration-300 inline-block"
+              className="btn-secondary px-8 py-4 text-lg inline-block"
             >
               View Our Services
             </Link>
