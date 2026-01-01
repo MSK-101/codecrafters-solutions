@@ -145,20 +145,85 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center">
-        {/* Background Pattern */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Radial Gradient Overlay */}
+        <div className="absolute inset-0 bg-radial-gradient"></div>
+
+        {/* Enhanced Grid Pattern */}
         <div className="absolute inset-0 grid-pattern opacity-30"></div>
 
-        {/* Floating Elements */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-20 animate-float"></div>
+        {/* Large Gradient Orbs with Blur */}
+        <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-gradient-to-br from-purple-600/30 via-violet-500/20 to-transparent rounded-full blur-3xl animate-float-slow"></div>
         <div
-          className="absolute top-40 right-20 w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full opacity-20 animate-float"
+          className="absolute top-20 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-cyan-500/30 via-blue-500/20 to-transparent rounded-full blur-3xl animate-float-slow"
+          style={{ animationDelay: "2s" }}
+        ></div>
+        <div
+          className="absolute bottom-0 left-1/4 w-[550px] h-[550px] bg-gradient-to-tr from-pink-500/25 via-purple-500/15 to-transparent rounded-full blur-3xl animate-float-slow"
+          style={{ animationDelay: "4s" }}
+        ></div>
+
+        {/* Medium Floating Orbs */}
+        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-20 blur-xl animate-float"></div>
+        <div
+          className="absolute top-1/3 right-1/4 w-24 h-24 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-25 blur-lg animate-float"
           style={{ animationDelay: "1s" }}
         ></div>
         <div
-          className="absolute bottom-20 left-20 w-24 h-24 bg-gradient-to-r from-violet-500 to-purple-500 rounded-full opacity-20 animate-float"
+          className="absolute bottom-1/4 right-1/3 w-28 h-28 bg-gradient-to-r from-violet-500 to-purple-600 rounded-full opacity-20 blur-xl animate-float"
           style={{ animationDelay: "2s" }}
         ></div>
+        <div
+          className="absolute top-2/3 left-1/3 w-20 h-20 bg-gradient-to-r from-teal-400 to-cyan-500 rounded-full opacity-25 blur-lg animate-float"
+          style={{ animationDelay: "3s" }}
+        ></div>
+
+        {/* Small Accent Particles */}
+        <div className="absolute top-20 left-10 w-3 h-3 bg-purple-400 rounded-full opacity-60 animate-pulse-glow"></div>
+        <div
+          className="absolute top-40 right-20 w-2 h-2 bg-cyan-400 rounded-full opacity-70 animate-pulse-glow"
+          style={{ animationDelay: "0.5s" }}
+        ></div>
+        <div
+          className="absolute bottom-32 left-16 w-2.5 h-2.5 bg-pink-400 rounded-full opacity-60 animate-pulse-glow"
+          style={{ animationDelay: "1s" }}
+        ></div>
+        <div
+          className="absolute top-1/2 right-10 w-2 h-2 bg-violet-400 rounded-full opacity-70 animate-pulse-glow"
+          style={{ animationDelay: "1.5s" }}
+        ></div>
+        <div
+          className="absolute bottom-1/4 right-1/4 w-3 h-3 bg-blue-400 rounded-full opacity-60 animate-pulse-glow"
+          style={{ animationDelay: "2s" }}
+        ></div>
+
+        {/* Animated Lines/Paths */}
+        <div className="absolute top-0 left-0 w-full h-full opacity-10">
+          <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="lineGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#8b5cf6" stopOpacity="0" />
+                <stop offset="50%" stopColor="#8b5cf6" stopOpacity="1" />
+                <stop offset="100%" stopColor="#06b6d4" stopOpacity="0" />
+              </linearGradient>
+            </defs>
+            <path
+              d="M 0 200 Q 400 100 800 300 T 1600 200"
+              stroke="url(#lineGradient1)"
+              strokeWidth="2"
+              fill="none"
+              className="animate-dash"
+            />
+            <path
+              d="M 0 400 Q 300 500 600 300 T 1200 400"
+              stroke="url(#lineGradient1)"
+              strokeWidth="2"
+              fill="none"
+              className="animate-dash"
+              style={{ animationDelay: "1s" }}
+            />
+          </svg>
+        </div>
 
         <div className="relative z-10 container-modern text-center">
           <div className="animate-fade-in-up">
