@@ -457,15 +457,15 @@ body {
 /* Radial Gradient Background */
 .bg-radial-gradient {
   background: radial-gradient(
-    ellipse at top,
-    rgba(139, 92, 246, 0.15) 0%,
-    transparent 50%
-  ),
-  radial-gradient(
-    ellipse at bottom,
-    rgba(6, 182, 212, 0.1) 0%,
-    transparent 50%
-  );
+      ellipse at top,
+      rgba(139, 92, 246, 0.15) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at bottom,
+      rgba(6, 182, 212, 0.1) 0%,
+      transparent 50%
+    );
 }
 
 /* Responsive Design */
